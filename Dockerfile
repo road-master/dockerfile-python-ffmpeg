@@ -1,4 +1,4 @@
-FROM python:3.9.0-slim-buster
+FROM python:3.9.6-slim-buster
 
 # Avoid warnings by switching to noninteractive
 # see: https://docs.docker.com/engine/faq/#why-is-debian_frontendnoninteractive-discouraged-in-dockerfiles
