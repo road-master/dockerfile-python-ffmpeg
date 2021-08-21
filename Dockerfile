@@ -1,21 +1,15 @@
-FROM python:3.9.6-slim-buster
-
-# Avoid warnings by switching to noninteractive
-# see: https://docs.docker.com/engine/faq/#why-is-debian_frontendnoninteractive-discouraged-in-dockerfiles
-ENV DEBIAN_FRONTEND=noninteractive
-
-# Configure apt and install packages
-# 'deb-multimedia.org' is a site that offers a repository of multimedia packages
-RUN echo "deb http://www.deb-multimedia.org buster main non-free" >> /etc/apt/sources.list \
-    && apt-get update -oAcquire::AllowInsecureRepositories=true \
-    && apt-get -y install deb-multimedia-keyring --allow-unauthenticated\
-    && apt-get update \
-    && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
-    && apt-get -y install ffmpeg \
-    && rm -rf /var/lib/apt/lists/*
-
-# Switch back to dialog for any ad-hoc use of apt-get
-ENV DEBIAN_FRONTEND=
+FROM jrottenberg/ffmpeg:4.4-ubuntu2004 as production
+# see: https://linuxize.com/post/how-to-install-python-3-9-on-ubuntu-20-04/
+RUN apt-get update && apt-get install -y \
+    software-properties-common \
+ && rm -rf /var/lib/apt/lists/* \
+ && add-apt-repository ppa:deadsnakes/ppa
+RUN apt-get update && apt-get install -y \
+    python3.9 \
+    python3-pip \
+ && rm -rf /var/lib/apt/lists/*
+ # Switch default Python3 to Python 3.9
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
 
 # For compatibility with Visual Studio Code
 WORKDIR /workspace
