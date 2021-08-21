@@ -1,7 +1,5 @@
 <!-- markdownlint-disable first-line-h1 -->
-[![docker build automated?](https://img.shields.io/docker/cloud/automated/docker-hub-account-name/python-ffmpeg.svg)](https://hub.docker.com/r/docker-hub-account-name/python-ffmpeg/builds)
-[![docker build passing?](https://img.shields.io/docker/cloud/build/docker-hub-account-name/python-ffmpeg.svg)](https://hub.docker.com/r/docker-hub-account-name/python-ffmpeg/builds)
-[![image size and number of layers](https://images.microbadger.com/badges/image/docker-hub-account-name/python-ffmpeg.svg)](https://hub.docker.com/r/docker-hub-account-name/python-ffmpeg/dockerfile)
+[![Test](https://github.com/yukihiko-shinoda/asynccpu/workflows/Test/badge.svg)](https://github.com/road-master/dockerfile-python-ffmpeg/actions?query=workflow%3ATest)
 
 # Quick reference
 

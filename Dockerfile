@@ -1,4 +1,4 @@
-FROM jrottenberg/ffmpeg:4.4-ubuntu2004 as production
+FROM jrottenberg/ffmpeg:4.4-ubuntu2004
 # see: https://linuxize.com/post/how-to-install-python-3-9-on-ubuntu-20-04/
 RUN apt-get update && apt-get install -y \
     software-properties-common \
