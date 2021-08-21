@@ -1,0 +1,11 @@
+---
+version: '3.8'
+services:
+  sut:
+    build:
+      context: .
+    command:
+      - sh
+      - -c
+      - "ffmpeg -version && python3 --version"
+    entrypoint: []
