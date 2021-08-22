@@ -1,5 +1,5 @@
 <!-- markdownlint-disable first-line-h1 -->
-[![Test](https://github.com/yukihiko-shinoda/asynccpu/workflows/Test/badge.svg)](https://github.com/road-master/dockerfile-python-ffmpeg/actions?query=workflow%3ATest)
+[![Test](https://github.com/road-master/dockerfile-python-ffmpeg/workflows/Test/badge.svg)](https://github.com/road-master/dockerfile-python-ffmpeg/actions?query=workflow%3ATest)
 
 # Quick reference
 
