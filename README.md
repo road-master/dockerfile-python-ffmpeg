@@ -1,5 +1,6 @@
 <!-- markdownlint-disable first-line-h1 -->
-[![Test](https://github.com/road-master/dockerfile-python-ffmpeg/workflows/Test/badge.svg)](https://github.com/road-master/dockerfile-python-ffmpeg/actions?query=workflow%3ATest)
+[![Test](https://github.com/road-master/dockerfile-python-ffmpeg/actions/workflows/test.yml/badge.svg)](https://github.com/road-master/dockerfile-python-ffmpeg/actions/workflows/test.yml)
+[![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/mstmelody/python-ffmpeg)](https://hub.docker.com/r/mstmelody/python-ffmpeg/dockerfile)
 
 # Quick reference
 
