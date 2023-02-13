@@ -7,5 +7,5 @@ services:
     command:
       - sh
       - -c
-      - "ffmpeg -version && python3 --version"
+      - "ffmpeg -version && python3 --version && pip --version"
     entrypoint: []
