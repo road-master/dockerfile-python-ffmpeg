@@ -7,5 +7,9 @@ services:
     command:
       - sh
       - -c
-      - "ffmpeg -version && python3 --version && pip --version"
+      # Installing Python and pip usually should avoid non version suffix commands
+      # to prevent executing unintentional versions:
+      # - Chapter 19. Installing and using dynamic programming languages Red Hat Enterprise Linux 8 | Red Hat Customer Portal
+      #   https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_basic_system_settings/installing-and-using-dynamic-programming-languages_configuring-basic-system-settings
+      - "ffmpeg -version && python3 --version && pip3 --version"
     entrypoint: []
