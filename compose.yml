@@ -1,9 +1,10 @@
----
-version: '3.9'
 services:
-  sut:
+  python-ffmpeg:
     build:
       context: .
+      args:
+        IMAGE_TAG_FFMPEG: ${IMAGE_TAG_FFMPEG:?err}
+        VERSION_UV: ${VERSION_UV:?err}
     command:
       - sh
       - -c
@@ -11,5 +12,6 @@ services:
       # to prevent executing unintentional versions:
       # - Chapter 19. Installing and using dynamic programming languages Red Hat Enterprise Linux 8 | Red Hat Customer Portal
       #   https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_basic_system_settings/installing-and-using-dynamic-programming-languages_configuring-basic-system-settings
-      - "ffmpeg -version && python3 --version && pip3 --version"
-    entrypoint: []
+      - "ffmpeg -version && uv run python --version && uvx pip debug"
+    volumes:
+      - .:/workspace
