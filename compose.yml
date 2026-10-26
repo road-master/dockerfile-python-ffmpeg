@@ -3,8 +3,12 @@ services:
     build:
       context: .
       args:
-        IMAGE_TAG_FFMPEG: ${IMAGE_TAG_FFMPEG:?err}
-        VERSION_UV: ${VERSION_UV:?err}
+        # - linuxserver/ffmpeg - Docker Image
+        #   https://hub.docker.com/r/linuxserver/ffmpeg/tags
+        IMAGE_TAG_FFMPEG: 9.0-cli-ls78
+        # - uv · PyPI
+        #   https://pypi.org/project/uv/#history
+        VERSION_UV: 0.12.5
     command:
       - sh
       - -c
